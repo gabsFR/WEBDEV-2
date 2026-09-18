@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Hello World</h1>
+    <p>
+        Olá Gabriel, o <span id="classes">???</span> <span id="adjetivos">???</span> de <span id="reinos">???</span>
+    </p>
+
+    <script>
+
+        let classes = ["Paladino", "Mago", "Bardo", "Druida", "Guerreiro", "Ladino", "Monge", "Feiticeiro", "Bruxo", "Clérigo", "Bovino"]
+        let adjetivos = ["Valente" , "implacável", "destemido", "honrado", "intrépido", "ousado", "resoluto", "glorioso"]
+        let reinos = ["Lordran", "Valhalla", "Skyrim", "Hyrule", "Arroio dos Ratos"]
+        
+        let classe = document.querySelector("p #classes")
+        classe.innerText = classes[Math.floor(Math.random() * classes.length)]
+
+        let adjetivo = document.querySelector("p #adjetivos")
+        adjetivo.innerText = adjetivos[Math.floor(Math.random() * adjetivos.length)]
+        
+        let reino = document.querySelector("p #reinos")
+        reino.innerText = reinos[Math.floor(Math.random() * reinos.length)]
+
+    </script>
+
+</body>
+
+</html>
