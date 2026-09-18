@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .sucesso{
+            background-color: rgb(0, 255, 0);
+            color: rgb(0, 0, 0);
+        }
+        .erro{
+            background-color: red;
+            color: whitesmoke;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <input type="text" value="">
+    <div id="mensagem"></div>
+
+    <script>
+
+        const campoTexto = document.querySelector("input")
+        const mensagem = document.querySelector("#mensagem")
+        campoTexto.addEventListener("input", () => {
+
+            let digitado = campoTexto.value
+            mensagem.classList.remove("erro")
+            mensagem.classList.remove("sucesso")
+
+            if (digitado == "chocolate") {
+
+                mensagem.innerText = "meu sabor de sorvete favorito"
+                mensagem.classList.add("sucesso")
+
+            } else if (digitado == "flocos") {
+
+               mensagem.innerText = "Flocos é bom demais"
+               mensagem.classList.add("sucesso")
+
+            } else if (digitado == "maracuja") {
+
+               mensagem.innerText = "eu amo maracuja"
+               mensagem.classList.add("sucesso")
+
+            } else if (digitado == "uranio") {
+
+                mensagem.innerText = "A, muito obrigado!"
+                mensagem.classList.add("sucesso")
+
+            } else if (digitado == "mijo") {
+
+                mensagem.innerText = "💀"
+                mensagem.classList.add("erro")
+
+            }else{
+                mensagem.innerText = "Não temos isso em nosso cardapio"
+                mensagem.classList.add("erro")
+
+            }
+
+        })
+
+    </script>
+
+</body>
+
+</html>

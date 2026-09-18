@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+
+
+    <p id="contador-clicks"></p>
+    <button id="botao"><img
+            src="https://static.wikia.nocookie.net/cookieclicker/images/5/5a/PerfectCookie.png/revision/latest/scale-to-width-down/250?cb=20130827014912"
+            alt=""> <br> clique agui</button>
+
+    <script>
+
+        const contadorClicks = document.querySelector("#contador-clicks")
+        const botao = document.querySelector("#botao")
+        let contador = 0
+
+        botao.addEventListener("click", ()=>{
+            contador ++
+            contadorClicks.innerText = contador + " Cookies"
+        })
+    </script>
+</body>
+
+</html>
