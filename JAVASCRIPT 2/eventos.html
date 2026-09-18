@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Texto</h1>
+    <button>Clique aqui</button>
+
+    <script>
+        let texto = document.querySelector("h1")
+        let botao = document.querySelector("button")
+
+        botao.addEventListener("click", ()=>{
+            texto.style.color = "black"
+            texto.style.fontSize = "90px"
+        })
+
+        document.addEventListener("keydown", (event)=>{
+            console.log('Voce pressionou a tecla:' + event.key)
+        })
+
+        document.addEventListener("click", ()=>{
+            let bgColor = 'rgb('
+            + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')'
+            document.body.style.backgroundColor = bgColor
+        })
+            
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 class="frase">ablubleble</h1>
+    <button class="botao">ablubleble </button>
+
+    <script>
+        let frase = document.querySelector(".frase")
+        let botao = document.querySelector(".botao")
+        let estadoFrase = 1
+
+        botao.onclick = function() {
+
+            if(estadoFrase == 1){
+                frase.style.color = "#98004D"
+                frase.style.fontSize = "90px"
+                frase.textContent = "OOTIMOOO"
+                estadoFrase = 2
+
+            }else{
+
+                frase.style.color = "#F02108"
+                frase.style.fontSize = "90px"
+                frase.textContent = "FREAKING FUCKING GAMES"
+                estadoFrase = 1
+            }
+        }
+    </script>
+</body>
+</html>
