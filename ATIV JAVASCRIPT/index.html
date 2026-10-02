@@ -11,14 +11,14 @@
     
     <h1 class="frase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore rem ex dolorum magnam harum iste voluptatibus. Unde voluptatum optio reprehenderit rem voluptate, tempora libero et harum dolor veritatis nesciunt omnis!</h1>
     <script>
+
         let frase = document.querySelector(".frase")
+        
+            let bgColor = 'rgb('
+            + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')'
+            frase.style.fontSize = Math.floor(Math.random() * 71 + 30) + "px"
+            frase.style.color = bgColor
 
-        frase.addEventListener("DOMContentLoaded" (event => {
-            let randSize = Math.floor(Math.random() * (max - min + 1)) + min
-            frase.style.fontSize = randSize + "px"
-
-
-        }))
     </script>
 
 </body>
