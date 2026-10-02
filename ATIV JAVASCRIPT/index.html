@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <h1 class="frase">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore rem ex dolorum magnam harum iste voluptatibus. Unde voluptatum optio reprehenderit rem voluptate, tempora libero et harum dolor veritatis nesciunt omnis!</h1>
+    <script>
+        let frase = document.querySelector(".frase")
+
+        frase.addEventListener("DOMContentLoaded" (event => {
+            let randSize = Math.floor(Math.random() * (max - min + 1)) + min
+            frase.style.fontSize = randSize + "px"
+
+
+        }))
+    </script>
+
+</body>
+
+</html>
