@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="adventureMaker"><img src="cooltext517173433891563.png" alt=""></button>
+    <p>
+        <span id="acoes">???</span> <span id="locais">???</span> <span id="extras">???</span>
+    </p>
+
+    <script>
+        let acoes = ["A Aventura", "A Batalha", "O Resgate", "O Roubo", "A Destruição"]
+
+        let locais = ["Na Floresta Uivante", "Na Forja Flamejante", "Nos Salões de Altobloco", "Na Fortaleza Solitária", "No Pináculo de Obsidiana", "Na Cidadela Destruída"]
+
+        let extras = ["Do Arce-Illager", "Do TerraPrisma", "Da Monstruosidade de Redstone", "Do Le Fishe Playlist (Animated) - [Jazz, Fishy Synths, Old European Movie Soundtracks]", "Da Flecha de Stand"]
+
+        adventureMaker.addEventListener("click", () => {
+
+            let acao = document.querySelector("#acoes")
+            acao.innerText = acoes[Math.floor(Math.random() * acoes.length)]
+
+            let local = document.querySelector("#locais")
+            local.innerText = locais[Math.floor(Math.random() * locais.length)]
+
+            let extra = document.querySelector("#extras")
+            extra.innerText = extras[Math.floor(Math.random() * extras.length)]
+
+        })
+
+    </script>
+</body>
+
+</html>
