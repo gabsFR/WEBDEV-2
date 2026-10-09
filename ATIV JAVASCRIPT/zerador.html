@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
 
 
 </head>
+
 <body>
-    
-    <button id="botao"><img src="https://static.wikia.nocookie.net/cookieclicker/images/5/5a/PerfectCookie.png/revision/latest/scale-to-width-down/250?cb=20130827014912" alt=""></button>
+
+    <button id="botao"><img
+            src="https://static.wikia.nocookie.net/cookieclicker/images/5/5a/PerfectCookie.png/revision/latest/scale-to-width-down/250?cb=20130827014912"
+            alt=""></button>
     <button id="zerador">ZERAR COOKIES</button>
 
     <p id="contador-clicks"><br></p>
@@ -20,12 +24,12 @@
         const zerador = document.querySelector("#zerador")
         let contador = 0
 
-        botao.addEventListener("click", ()=>{
-            contador ++
+        botao.addEventListener("click", () => {
+            contador++
             contadorClicks.innerText = contador + " Cookies"
         })
 
-        zerador.addEventListener("click", ()=>{
+        zerador.addEventListener("click", () => {
             contador = 0
             contadorClicks.innerText = contador + " Cookies"
 
@@ -34,4 +38,5 @@
     </script>
 
 </body>
+
 </html>
