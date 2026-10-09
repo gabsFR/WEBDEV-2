@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* TEMA CLARO */
+        body {
+            font-family: Arial;
+            transition: 0.3s;
+        }
+
+        body.claro {
+            background-color: white;
+            color: black;
+        }
+
+        /* TEMA ESCURO */
+        body.escuro {
+            background-color: rgb(1, 0, 6);
+            color: white;
+        }
+
+        /* TEMA GREEN */
+        body.green {
+            background-color: #06ff00;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form id="formPreferencias">
+        <div class="grupo">
+            <label for="">
+                tema:
+            </label>
+            <select id="tema">
+
+                <option value="claro">
+                    claro
+                </option>
+
+                <option value="escuro">
+                    escuro
+                </option>
+
+                <option value="green">
+                    GREEN
+                </option>
+
+
+            </select>
+        </div>
+
+        <div class="grupo">
+            <button id="btnSalvar">Salvar preferencias</button>
+        </div>
+
+    </form>
+
+    <script>
+
+        const body = document.querySelector('body')
+        const form = document.querySelector('#formPreferencias')
+        const tema = document.querySelector('#tema')
+
+        const temaSalvo = localStorage.getItem('tema')
+        if (tema) {
+            aplicarTema(temaSalvo)
+        }
+
+        form.addEventListener('submit', function (evento) {
+
+            evento.preventDefault()
+            const temaSelecionado = tema.value
+            aplicarTema(temaSelecionado)
+
+            localStorage.setItem('tema', temaSelecionado)
+
+        })
+
+        function aplicarTema(temaSelecionado) {
+
+            body.classList.remove("claro", "escuro", "green")
+            body.classList.add(temaSelecionado)
+
+            tema.value = temaSelecionado
+
+        }
+
+        function salvarTema(tema) {
+            localStorage.setItem('tema', tema)
+        }
+
+    </script>
+
+</body>
+
+</html>

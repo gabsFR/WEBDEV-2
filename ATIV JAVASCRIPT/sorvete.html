@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" value="">
+    <div id="mensagem"></div>
+
+    <script>
+
+        const campoTexto = document.querySelector("input")
+        const mensagem = document.querySelector("#mensagem")
+        campoTexto.addEventListener("input", () => {
+
+            let digitado = campoTexto.value
+            mensagem.classList.remove("erro")
+            mensagem.classList.remove("sucesso")
+
+            if (digitado.length < 3) {
+
+                mensagem.innerText = "Sabor mto pequeno"
+
+            } else if (digitado == "chocolate") {
+
+                mensagem.innerText = "Eu amo sorvete de chocolate!"
+                mensagem.classList.add("sucesso")
+
+            } else if (digitado == "flocos") {
+
+                mensagem.innerText = "Ahh, mas chocolate é o meu favorito..."
+                mensagem.classList.add("sucesso")
+
+            } else {
+                mensagem.innerText = "Ahh, eu esperava um sabor de sorvete..."
+                mensagem.classList.add("erro")
+
+            }
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>

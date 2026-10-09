@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="mcgucket"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkQ8TFkwiQFr3Ic3IMmgEWyg9c7959HJH1fGAFde8Oqg&s=10"
+            alt=""></h1>
+    <p id="falas"></p>
+    <button id="change">MUDAR FOTO</button>
+
+    <script>
+        mcgucket.addEventListener("mouseenter", (event) => {
+            falas.textContent = "Velho McGucket! (Cospe num balde) Cuspindo num balde!"
+        })
+
+        mcgucket.addEventListener("mouseleave", (event) => {
+            falas.textContent = "Você pode fugir, mas eu ainda estarei nos seus pesadelos!!"
+        })
+
+        mcgucket.addEventListener("mousemove", (event) => {
+            falas.textContent = "Sigam-me por este beco escuro e perigoso!"
+        })
+
+        mcgucket.addEventListener("click", (event) => {
+            falas.textContent = "LUTE COMO UM CAIPIRA!"
+        })
+
+        change.addEventListener("click", () => {
+            mcgucket.querySelector("img").src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOTCeo5VBrofqzD3YrE4LOPcZoFXoFy2yskaijXbgYBzr7EN15Fo72Djjz&s=10'
+
+        })
+
+    </script>
+</body>
+
+</html>

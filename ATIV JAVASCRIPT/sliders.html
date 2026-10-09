@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="imagem"><img src="https://picsum.photos/id/237/600/400" alt=""></h1>
+    <button id="tras">ULTIMO</button>
+    <button id="frente">PROXIMO</button>
+
+    <script>
+        const imagens = [
+            "https://picsum.photos/id/237/600/400",
+            "https://picsum.photos/id/238/600/400",
+            "https://picsum.photos/id/239/600/400",
+            "https://picsum.photos/id/240/600/400"
+
+        ]
+
+        const imagem = document.querySelector("#imagem img");
+        let indice = 0
+
+        function trocarImagem() {
+            indice = (indice + 1) % imagens.length;
+            imagem.src = imagens[indice];
+        }
+
+        setInterval(trocarImagem, 5000)
+
+        frente.addEventListener("click", () => {
+            indice = (indice + 1) % imagens.length
+            imagem.src = imagens[indice];
+
+        })
+
+        tras.addEventListener("click", () => {
+            indice = (indice - 1 + imagens.length) % imagens.length
+            imagem.src = imagens[indice];
+
+        })
+    </script>
+
+</body>
+
+</html>
