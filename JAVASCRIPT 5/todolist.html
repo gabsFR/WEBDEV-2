@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Minhas Notas</h1>
+
+        <!--1. criar entrada  -->
+        <div class="entrada">
+
+            <input type="text" id="nota" placeholder="digite uma nota">
+            <button id="btnAdd">adicionar</button>
+            <button id="fullRemove">Remover todos</button>
+
+        </div>
+
+        <!--2. apresentar notas  -->
+
+        <ul id="listaNotas">
+
+        </ul>
+
+    </div>
+
+
+    <script>
+        const listaNotas = document.querySelector('#listaNotas')
+        const campoNota = document.querySelector('#nota')
+        const btnAdicionar = document.querySelector('#btnAdd')
+        const fullRemove = document.querySelector('#fullRemove')
+
+        let notas = JSON.parse(localStorage.getItem('notas'))
+
+        if (notas == null) {
+            notas = []
+        }
+
+        function adicionarNota() {
+            const texto = campoNota.value.trim()
+
+            if (texto == "") {
+                alert('Digite alguma coisa')
+                return
+            }
+
+            const novaNota = {
+                texto: texto,
+                concluida: false
+            }
+
+            notas.push(novaNota)
+            localStorage.setItem('notas', JSON.stringify(notas))
+
+            campoNota.value = ''
+            exibirNotas()
+        }
+
+        function exibirNotas() {
+            listaNotas.innerHTML = ''
+
+            if (notas.length == 0) {
+                listaNotas.textContent = 'nenhuma nota cadastrada'
+                return
+
+            }
+
+            notas.forEach(function (nota, indice) {
+
+                const item = document.createElement('li')
+
+                const texto = document.createElement('span')
+                texto.textContent = nota.texto
+
+                texto.classList.add('texto-nota')
+
+                if (nota.concluida) {
+                    texto.classList.add('concluida')
+                }
+
+                const btnRemover = document.createElement('button')
+                btnRemover.textContent = "Remover"
+
+                btnRemover.addEventListener('click', function(){
+                    removerNota(indice)
+                })
+
+                item.appendChild(texto)
+                item.appendChild(btnRemover)
+                listaNotas.appendChild(item)
+
+            })
+
+        }
+
+        function removerNota (indice){
+            notas.splice(indice, 1)
+            localStorage.setItem("notas", JSON.stringify(notas))
+            exibirNotas()
+
+        }
+        function removerTudo (indice){
+            notas.splice(0)
+            localStorage.setItem("notas", JSON.stringify(notas))
+            exibirNotas()
+
+        }
+
+        btnAdicionar.addEventListener('click', adicionarNota)
+        fullRemove.addEventListener('click', removerTudo)
+        exibirNotas()
+
+    </script>
+
+</body>
+
+</html>
