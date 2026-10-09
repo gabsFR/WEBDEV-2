@@ -5,24 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
 </head>
 
 <body>
-    
+
     <h1 class="frase">aaaaaaaaaaaaaaaaa</h1>
     <script>
 
         let frase = document.querySelector(".frase")
-        
-            let bgColor = 'rgb('
+
+        let bgColor = 'rgb('
             + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')';
 
-            const difFrases = ['Down For The Count', 'Greased Lightning', 'Fit as a Fiddle', "Read 'Em and Weep" , 'Son of a Gun', 'An Arm and a Leg'];
-            const randIndex = Math.floor(Math.random() * difFrases.length);
-            const randFrase = difFrases[randIndex]
-            frase.style.fontSize = Math.floor(Math.random() * 71 + 30) + "px";
-            frase.style.color = bgColor
-            frase.textContent = randFrase
+        const difFrases = ['Down For The Count', 'Greased Lightning', 'Fit as a Fiddle', "Read 'Em and Weep", 'Son of a Gun', 'An Arm and a Leg'];
+        const randIndex = Math.floor(Math.random() * difFrases.length);
+        const randFrase = difFrases[randIndex]
+        frase.style.fontSize = Math.floor(Math.random() * 71 + 30) + "px";
+        frase.style.color = bgColor
+        frase.textContent = randFrase
 
     </script>
 
