@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <button id="listMaker">CRIADOR DE LISTA</button>
     <ol id="lista">
-        
+
     </ol>
 
     <script>
-        
-        listMaker.addEventListener("click", ()=> {
+
+        listMaker.addEventListener("click", () => {
             let novaLinha = document.createElement("li")
             novaLinha.textContent = "Item n° " + (lista.children.length + 1);
             lista.appendChild(novaLinha)
@@ -23,4 +25,5 @@
 
     </script>
 </body>
+
 </html>
