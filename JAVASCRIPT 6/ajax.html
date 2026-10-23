@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Bem vindo <span></span></h2>
+    <h5></h5>
+
+    <script>
+
+        const espacoNome = document.querySelector('span')
+        const espacoPais = document.querySelector('h5')
+
+        fetch('https://randomuser.me/api/')
+        .then(resposta => resposta.json())
+        .then(dados => {
+
+            console.log(dados['results'][0].name.first)
+
+            const nome = dados['results'][0].name
+            const pais = dados['results'][0].location.country
+
+            espacoNome.innerText = nome.title + ' ' + nome.first + ' ' + nome.last
+            espacoPais.innerText = pais
+
+        })
+        .catch(erro => {
+            console.log("deu um erro")
+        })
+
+    </script>
+
+</body>
+</html>
