@@ -1,19 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+
+    <!-- Trabalho por Gabriel Fonseca -->
 
 </head>
+
 <body>
-    
-    <input type="text" id="busca">
-    <h1 id="nome"></h1>
-    <h2 id="tipo"></h2>
+
+    <section class="header"><img src="assets/pokedex3d_boxart.png" alt=""></section>
+
+    <section class="buscas">
+        <input type="text" id="busca">
+        <button id="buscarBusca">Buscar</button>
+    </section>
+
+    <section class="carta">
+        <p id="erro"></p>
+        <section class="nome-id">
+            <h1 id="nome"></h1>
+            <h2 id="id"></h2>
+        </section>
+        <section class="rg">
+            <p id="rg"><img src="" alt=""></p>
+        </section>
+
+        <section class="tipos">
+            <h2 id="tipo"></h2>
+        </section>
+
+        <section class="metricas">
+            <p id="altura"></p>
+            <p id="peso"></p>
+        </section>
+
+        <section class="stats">
+            <p id="hp"></p>
+            <div class="barra">
+                <div class="progresso" id="barraHp"></div>
+            </div>
+            <p id="atk"></p>
+            <div class="barra">
+                <div class="progresso" id="barraAtk"></div>
+            </div>
+            <p id="df"></p>
+            <div class="barra">
+                <div class="progresso" id="barraDf"></div>
+            </div>
+            <p id="SpAtk"></p>
+            <div class="barra">
+                <div class="progresso" id="barraSp"></div>
+            </div>
+        </section>
+    </section>
+
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
